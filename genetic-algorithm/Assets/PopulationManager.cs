@@ -8,7 +8,18 @@ public class PopulationManager : MonoBehaviour
     public int populationSize = 10;
     List<GameObject> population = new List<GameObject>();
     public static float elapsed = 0;
-    
+    int trialTime = 20;
+    int generation = 1;
+
+    GUIStyle guiStyle = new GUIStyle();
+    void OnGUI()
+    {
+        guiStyle.fontSize = 30;
+        guiStyle.normal.textColor = Color.white;
+        GUI.Label(new Rect(10, 10, 100, 20), "Generation:" + generation, guiStyle);
+        GUI.Label(new Rect(10, 65, 100, 20), "Time:" + (int)elapsed, guiStyle);
+    }
+
     //Initialization
     void Start()
     {
