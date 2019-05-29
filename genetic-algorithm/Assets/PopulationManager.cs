@@ -14,10 +14,8 @@ public class PopulationManager : MonoBehaviour
     {
         for (int i=0; i<populationSize; i++)
         {
-            Vector3 pos = new Vector3(Random.Range(-7.5f,7.5f), Random.Range(-3.5f,3.5f), 0);
+            Vector3 pos = new Vector3(Random.Range(-7.0f,7.0f), Random.Range(-3.5f,3.5f), 0);
             GameObject go = Instantiate(personPrefab, pos, Quaternion.identity);
-            Debug.Log(go);
-            Debug.Log("Person Added");
             go.GetComponent<DNA>().r = Random.Range(0.0f, 1.0f);
             go.GetComponent<DNA>().g = Random.Range(0.0f, 1.0f);
             go.GetComponent<DNA>().b = Random.Range(0.0f, 1.0f);
