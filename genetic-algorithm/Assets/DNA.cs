@@ -23,7 +23,7 @@ public class DNA : MonoBehaviour
     {
         dead = true;
         timeToDie = PopulationManager.elapsed;
-        Debug.Log("Dead at :" + timeToDie);
+        //Debug.Log("Dead at :" + timeToDie);
         sRenderer.enabled = false;
         sCollider.enabled = false;
     }
