@@ -50,9 +50,17 @@ public class Brain : MonoBehaviour
         bool crouch = false;
         if (dna.GetGene(0) == 0) v = 1;
         else if (dna.GetGene(0) == 1) v = -1;
-        else if (dna.GetGene(0) == 2) h = -1  
-        else if (dna.GetGene(0) == 3)
-        else if (dna.GetGene(0) == 4)
-        else if (dna.GetGene(0) == 5)
+        else if (dna.GetGene(0) == 2) h = -1;
+        else if (dna.GetGene(0) == 3) h = 1;
+        else if (dna.GetGene(0) == 4) m_Jump = true;
+        else if (dna.GetGene(0) == 5) crouch = true;
+
+        //Define movement 
+        m_Move = v * Vector3.forward + h * Vector3.right;
+        m_Character.Move(m_Move, crouch, m_Jump);
+        //Disable jump
+        m_Jump = false;
+        if (alive)
+            timeAlive = Time.deltaTime;
     }
 }
