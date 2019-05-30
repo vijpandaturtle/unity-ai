@@ -646,6 +646,7 @@
   <ItemGroup>
     <Compile Include="Assets\Brain.cs" />
     <Compile Include="Assets\DNA.cs" />
+    <Compile Include="Assets\PopulationManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.analytics\DataPrivacy\Unity.Analytics.DataPrivacy.asmdef" />
