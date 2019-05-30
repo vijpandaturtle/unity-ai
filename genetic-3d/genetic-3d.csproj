@@ -644,6 +644,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Brain.cs" />
     <Compile Include="Assets\DNA.cs" />
   </ItemGroup>
   <ItemGroup>
